@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(https://images01.nicepage.io/c461c07a441a5d220e8feb1a/f4d17850d66250cb9686206f/xz.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    position: absolute;
+    top: 43px; 
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+}
+h1 {
+    color: #322030;
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 0 0 10px #fff8f8;
+}
+.container{
+    width: 90%;
+     height: 80vh; 
+    background: rgba(14, 14, 14, 0.267);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px ); 
+    position: relative;
+    border-radius: 5px;
+    min-height: 80vh;  
+}
+.panel-tareas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 35px;
+    gap: 20px;
+}
+.item-tarea{
+    border-radius: 5px;
+    width: 18%;
+   text-align: center;
+   padding: 10px;
+   background: rgba(255, 255, 255, 0.384);
+   position: relative;
+   padding-bottom: 45px;
+}
+.boton-tarea{
+   position: absolute; 
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   gap: 30px;
+   display: flex;
+}
+.boton-tarea button{
+   border: none;
+   background: none;
+}
+i{
+background-color: none;
+color: #322030;
+font-size: 21px;
+cursor: pointer;
+transition: all .3s;
+scale: 1;
+}
+i:hover{
+scale: 1.1;
+}
+.tareas {
+   display: none;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffffc9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: move;
+    z-index: 2;
+    width: 350px;
+
+    text-align: center;
+}
+.tareas h1{
+    color: #322030;
+}
+#titulo{
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #322030;  
+    height: 20px;
+    background-color: transparent;
+}    
+#titulo:focus{
+    border-bottom: 2px solid #322030;
+    outline: none;
+}
+textarea{
+    background-color: transparent;
+    width: 90%;
+    
+} 
+#date{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+}
+select{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+}
+.boton{
+    background-color: #322030;
+    color: #fff;
+    border: solid 1px transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.boton:hover{
+    background-color: transparent;
+    border: solid 1px #322030;
+    color: #322030;
+}
+
+.fa-circle-exclamation{
+    
+     font-size: 25px;
+}
+
+
+/* CSS button */
+.button-86 {
+all: unset;
+width: 100px;
+height: 30px;
+font-size: 14px;
+background: transparent;
+border: none;
+position: relative;
+color: #f0f0f0;
+cursor: pointer;
+z-index: 1;
+padding: 10px 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+white-space: nowrap;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+content: '';
+position: absolute;
+bottom: 0;
+right: 0;
+z-index: -99999;
+transition: all .4s;
+}
+
+.button-86::before {
+transform: translate(0%, 0%);
+width: 100%;
+height: 100%;
+background:#322030;
+border-radius: 10px;
+}
+
+.button-86::after {
+transform: translate(10px, 10px);
+width: 35px;
+height: 35px;
+background: #ffffff15;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border-radius: 50px;
+}
+
+.button-86:hover::before {
+transform: translate(5%, 20%);
+width: 110%;
+height: 110%;
+}
+
+.button-86:hover::after {
+border-radius: 10px;
+transform: translate(0, 0);
+width: 100%;
+height: 100%;
+}
+
+.button-86:active::after {
+transition: 0s;
+transform: translate(0, 5%);
+}
+
+.toast{
+width: 300px;
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+background-color: #000;
+color: #fff;
+text-align: center;
+padding: 1rem 0;
+border-radius: 0.5rem;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+transition: 0.2s ease-in;
+display: none;
+}
+
+.toast-error {
+background-color: rgba(255, 0, 0, 0.623);
+}
+
+.toast-confirmacion {
+background-color: rgb(20, 185, 20);
+}
+
+.toast-active {
+display: block;
+animation: slideinTop 3.5s ease-out forwards;
+}
+
+
+
+@keyframes slideinTop {
+0% {
+transform: translateY(0%);
+}
+30%, 50%, 70% {
+opacity: 1;
+transform: translateY(50%);
+}
+100% {
+opacity: 0;
+transform: translateX(0%);
+}
+}

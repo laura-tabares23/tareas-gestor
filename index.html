@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+</head>
+<body>
+    <div class="tareas" id="tareas">
+        <h2>Nueva tarea</h2>
+        <form action="" method="get">
+        <div>
+            <label for="titulo">Título</label>
+        </div>
+        <div>
+            <input type="text" name="titulo" id="titulo">
+        </div>
+        
+        <div>
+            <label for="date">Fecha</label>
+        </div>
+        <div>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            <label for="prioridad">Prioridad</label>
+        </div>
+        <select id="prioridad" name="prioridad">
+            <option value=""></option>
+            <option value="Importante">Importante</option>
+            <option value="No importante">No importante</option>
+           
+        </select>
+        <div>
+            <label for="descripcion">Título</label>
+        </div>
+        <div>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button class="boton" id="botonAñadir">Añadir</button>
+            <button class="boton" id="botonCerrar">Cerrar</button>
+        </div>
+    </form>
+    </div>
+
+    <div class="container">
+        <div class="panel-tareas"></div>
+       
+    </div>
+    <div class="titulo">
+        <h1>Gestor de tareas</h1>
+        <button class="button-86" role="button" id="crear">Crear tarea</button>
+    </div>
+    <div class="toast"></div>
+    <script src="script/script.js"></script>
+
+</body>
+</html>
